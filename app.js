@@ -61,7 +61,7 @@ app.post('/login',Login.login);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/user',User);
 app.use('/get',()=>{
- const pather = path.join(__dirname,'/uploads');
+ const pather = express.static(path.join(__dirname,'/uploads'));
  console.log("PATHER: ",pather);
 });
 // app.use('/jobseeker',Jobseeker);
