@@ -58,7 +58,7 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/login',Login.login);
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/user',User);
 // app.use('/jobseeker',Jobseeker);
 app.use('/post',Posts);
